@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="using_mode">Usando modo:</string>
+    <string name="created_by" traslatable="false" >Creado por Sergio Ariza Amat</string>
+    <string name="about_image_description" traslatable="false" >Imagen usuario</string>
+    <string name="go_to_website">Ir al sitio web</string>
+    <string name="get_support">Obtener soporte</string>
+    <string name="back">Volver</string>
+
 </resources>

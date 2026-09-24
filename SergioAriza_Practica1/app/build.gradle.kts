@@ -10,6 +10,10 @@ android {
         version = release(37)
     }
 
+    androidResources {
+        generateLocaleConfig = true
+    }
+
     defaultConfig {
         applicationId = "es.ua.eps.filmoteca"
         minSdk = 24
@@ -52,6 +56,7 @@ dependencies {
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.material3)
     implementation(libs.material)
 
     testImplementation(libs.junit)
@@ -63,4 +68,6 @@ dependencies {
 
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
+
+
 }
