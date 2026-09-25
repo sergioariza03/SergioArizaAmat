@@ -6,5 +6,8 @@
     <string name="go_to_website">Ir al sitio web</string>
     <string name="get_support">Obtener soporte</string>
     <string name="back">Volver</string>
-
+    <string name="no_app_available">No hay ninguna aplicación disponible para realizar esta acción</string>
+    <string name="film_a">Ver pelicula A</string>
+    <string name="film_b">Ver pelicula B</string>
+    <string name="about">Sobre mi</string>
 </resources>

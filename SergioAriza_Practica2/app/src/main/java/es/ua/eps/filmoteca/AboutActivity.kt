@@ -1,5 +1,6 @@
 package es.ua.eps.filmoteca
 
+import android.content.Intent
 import androidx.compose.ui.tooling.preview.AndroidUiModes.UI_MODE_NIGHT_YES
 import android.os.Bundle
 import android.widget.Toast
@@ -27,6 +28,8 @@ import androidx.compose.material3.Button
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import es.ua.eps.filmoteca.databinding.ActivityAboutBinding
+import android.content.ActivityNotFoundException
+import android.net.Uri
 
 class AboutActivity : AppCompatActivity() {
     private lateinit var bindings: ActivityAboutBinding
@@ -44,6 +47,42 @@ class AboutActivity : AppCompatActivity() {
         }
     }
 
+    private fun OpenWebsite(){
+        val viewIntent = Intent(
+            Intent.ACTION_VIEW,
+            Uri.parse("https://www.ua.es")
+        )
+
+        try{
+            startActivity(viewIntent)
+        } catch(e: ActivityNotFoundException){
+            Toast.makeText(
+                this,
+                R.string.no_app_available,
+                Toast.LENGTH_LONG
+            ).show()
+        }
+    }
+
+    private fun getSupport(){
+        val emailIntent = Intent(
+            Intent.ACTION_SENDTO,
+            Uri.parse("mailto:saa64@alu.ua.es")
+        )
+        try{
+            startActivity(emailIntent)
+        } catch(e: ActivityNotFoundException){
+            Toast.makeText(
+                this,
+                R.string.no_app_available,
+                Toast.LENGTH_LONG
+            ).show()
+        }
+    }
+
+    private fun goBack(){
+        finish()
+    }
     private fun initUIBindings() {
         bindings = ActivityAboutBinding.inflate(layoutInflater)
 
@@ -56,27 +95,15 @@ class AboutActivity : AppCompatActivity() {
             mode.text = str
 
             btnWebsite.setOnClickListener {
-                Toast.makeText(
-                    this@AboutActivity,
-                    "Not implemented yet",
-                    Toast.LENGTH_SHORT
-                ).show()
+                OpenWebsite()
             }
 
             btnSupport.setOnClickListener {
-                Toast.makeText(
-                    this@AboutActivity,
-                    "Not implemented yet",
-                    Toast.LENGTH_SHORT
-                ).show()
+                getSupport()
             }
 
             btnBack.setOnClickListener {
-                Toast.makeText(
-                    this@AboutActivity,
-                    "Not implemented yet",
-                    Toast.LENGTH_SHORT
-                ).show()
+                goBack()
             }
         }
     }

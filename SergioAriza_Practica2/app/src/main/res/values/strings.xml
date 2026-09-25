@@ -2,11 +2,16 @@
     <string name="app_name" translatable="false">Filmoteca</string>
     <string name="using_mode">Using mode:</string>
     <string name="created_by">Created by Sergio Ariza Amat</string>
-    <string name="about_image_description" >Imagen usuario</string>
+    <string name="about_image_description">Imagen usuario</string>
     <string name="go_to_website">Go to website</string>
     <string name="get_support">Get support</string>
     <string name="back">Back</string>
     <string name="not_implemented" translatable="false">Not implemented yet</string>
+    <string name="no_app_available">No application available to perform this action</string>
+    <string name="film_a">View film A</string>
+    <string name="film_b">View film B</string>
+    <string name="about">About</string>
+
 
 
 </resources>
