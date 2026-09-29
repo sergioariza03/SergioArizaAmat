@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="using_mode">Usando modo:</string>
+    <string name="created_by" traslatable="false" >Creado por Sergio Ariza Amat</string>
+    <string name="about_image_description" traslatable="false" >Imagen usuario</string>
+    <string name="go_to_website">Ir al sitio web</string>
+    <string name="get_support">Obtener soporte</string>
+    <string name="back">Volver</string>
+    <string name="no_app_available">No hay ninguna aplicación disponible para realizar esta acción</string>
+    <string name="film_a">Star Wars: Episodio IV - Una nueva esperanza</string>
+    <string name="film_b">El Señor de los Anillos: La Comunidad del Anillo</string>
+    <string name="about">Sobre mi</string>
+    <string name="film_data">Datos de la pelicula</string>
+    <string name="related_film">Ver una pelicula relaccionada</string>
+    <string name="edit_film">Editar pelicula</string>
+    <string name="edit">editando pelicula ...</string>
+    <string name="back_to_main">Volver al inicio</string>
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="film_a_title">Star Wars: Episodio IV - Una nueva esperanza</string>
+    <string name="film_b_title">El Señor de los Anillos: La Comunidad del Anillo</string>
+    <string name="related_film_title">Película relaccionada</string>
+    <string name="film_edited">%1$s (editada)</string>
+    <string name="gen_and_format">%1$s, %2$s</string>
+    <string name="film_poster">Póster de la película</string>
+    <string name="view_on_imdb">Ver en IMDb</string>
+    <string name="director">Director: %1$s</string>
+    <string name="year">Año: %1$d</string>
+    <string name="take_photo">Hacer foto</string>
+    <string name="select_image">Elegir imagen</string>
+    <string name="field_title">Title</string>
+    <string name="field_director">Director</string>
+    <string name="field_year">Year</string>
+    <string name="field_genre">Genero</string>
+    <string name="field_format">Formato</string>
+    <string name="imdb_url">Enlace a IMDb</string>
+    <string name="comments">Notas</string>
+
+</resources>
