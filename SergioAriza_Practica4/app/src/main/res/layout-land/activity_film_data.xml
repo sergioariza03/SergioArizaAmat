@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar" />
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Guía que marca el 70% del ancho -->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/buttonsStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.7" />
+
+            <!-- Póster -->
+            <ImageView
+                android:id="@+id/poster"
+                android:layout_width="160dp"
+                android:layout_height="220dp"
+                android:contentDescription="@string/film_poster"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Datos de la película -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                app:layout_constraintStart_toEndOf="@id/poster"
+                app:layout_constraintEnd_toStartOf="@id/buttonsStart"
+                app:layout_constraintTop_toTopOf="@id/poster" />
+
+            <TextView
+                android:id="@+id/director"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/poster"
+                app:layout_constraintEnd_toStartOf="@id/buttonsStart"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toEndOf="@id/poster"
+                app:layout_constraintEnd_toStartOf="@id/buttonsStart"
+                app:layout_constraintTop_toBottomOf="@id/director" />
+
+            <TextView
+                android:id="@+id/genreAndFormat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toEndOf="@id/poster"
+                app:layout_constraintEnd_toStartOf="@id/buttonsStart"
+                app:layout_constraintTop_toBottomOf="@id/year" />
+
+            <TextView
+                android:id="@+id/comments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/poster"
+                app:layout_constraintEnd_toStartOf="@id/buttonsStart"
+                app:layout_constraintTop_toBottomOf="@id/genreAndFormat" />
+
+            <!-- Botón Ver IMDb -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnImdb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/view_on_imdb"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                app:layout_constraintStart_toStartOf="@id/buttonsStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/poster" />
+
+            <!-- Botón Editar -->
+            <Button
+                android:id="@+id/btnEditfilm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/edit_film"
+                app:layout_constraintStart_toStartOf="@id/buttonsStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnImdb" />
+
+            <!-- Botón Volver -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBacktomain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/back_to_main"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                app:layout_constraintStart_toStartOf="@id/buttonsStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnEditfilm" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp" />
+
+</LinearLayout>
