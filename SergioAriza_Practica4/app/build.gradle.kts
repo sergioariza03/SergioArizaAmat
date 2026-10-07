@@ -58,6 +58,10 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.material3)
     implementation(libs.material)
+    implementation(libs.androidx.recyclerview)
+
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
 
     testImplementation(libs.junit)
 

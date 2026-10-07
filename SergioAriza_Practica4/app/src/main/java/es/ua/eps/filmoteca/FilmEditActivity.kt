@@ -52,7 +52,7 @@ import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.core.os.BundleCompat
-
+import es.ua.eps.filmoteca.ui.theme.FilmDataSource
 
 
 class FilmEditActivity : AppCompatActivity() {
@@ -94,7 +94,7 @@ class FilmEditActivity : AppCompatActivity() {
             intent,
             EXTRA_FILM,
             Film::class.java
-        ) ?: sampleFilms().first()
+        ) ?: FilmDataSource.films.first()
 
         currentImage = savedInstanceState?.let {
             BundleCompat.getParcelable(it, STATE_IMAGE, Bitmap::class.java)
@@ -573,7 +573,7 @@ class FilmEditActivity : AppCompatActivity() {
     @Composable
     fun FilmEditScreenPreview() {
         FilmEditScreen(
-            film = sampleFilms().first(),
+            film = FilmDataSource.films.first(),
             onSave = {},
             onCancel = {}
         )

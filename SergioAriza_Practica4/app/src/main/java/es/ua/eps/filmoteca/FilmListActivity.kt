@@ -18,9 +18,12 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import es.ua.eps.filmoteca.ui.theme.FilmDataSource
 
 class FilmListActivity : AppCompatActivity() {
     private lateinit var bindings: ActivityFilmListBinding
+
+    private lateinit var listAdapter: FilmArrayAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,26 +38,21 @@ class FilmListActivity : AppCompatActivity() {
         }
     }
 
-    private fun openFilmA() {
-        val intent = Intent(
-            this,
-            FilmDataActivity::class.java
-        )
-        intent.putExtra(
-            FilmDataActivity.EXTRA_FILM_TITLE,
-            getString(R.string.film_a_title)
-        )
-        startActivity(intent)
+    override fun onResume() {
+        super.onResume()
+        if (::listAdapter.isInitialized) {
+            listAdapter.notifyDataSetChanged()
+        }
     }
 
-    private fun openFilmB() {
+    private fun viewFilm(position: Int) {
         val intent = Intent(
             this,
             FilmDataActivity::class.java
         )
         intent.putExtra(
-            FilmDataActivity.EXTRA_FILM_TITLE,
-            getString(R.string.film_b_title)
+            FilmDataActivity.EXTRA_FILM_INDEX,
+            position
         )
         startActivity(intent)
     }
@@ -70,6 +68,7 @@ class FilmListActivity : AppCompatActivity() {
     private fun initUIBindings() {
         bindings = ActivityFilmListBinding.inflate(layoutInflater)
 
+
         with(bindings) {
             setContentView(root)
             root.applySystemBarsPadding(appBar.root, content)
@@ -78,12 +77,14 @@ class FilmListActivity : AppCompatActivity() {
             val str = "${getString(R.string.using_mode)} ${GlobalMode.name}"
             mode.text = str
 
-            btnFilmA.setOnClickListener {
-                openFilmA()
-            }
+            listAdapter= FilmArrayAdapter(
+                this@FilmListActivity,
+                FilmDataSource.films
+            )
 
-            btnFilmB.setOnClickListener {
-                openFilmB()
+            filmList.adapter = listAdapter
+            filmList.setOnItemClickListener { _, _, position, _ ->
+                viewFilm(position)
             }
 
             btnAbout.setOnClickListener {
@@ -91,14 +92,9 @@ class FilmListActivity : AppCompatActivity() {
             }
         }
     }
-
     private fun initUICompose() {
         setContent {
-            FilmListScreen(
-                onFilmA = { openFilmA() },
-                onFilmB = { openFilmB() },
-                onAbout = { openAbout() }
-            )
+
         }
     }
 

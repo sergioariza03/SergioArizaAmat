@@ -42,15 +42,17 @@ import android.content.res.Configuration
 import androidx.compose.ui.platform.LocalConfiguration
 
 import androidx.compose.ui.unit.dp
+import es.ua.eps.filmoteca.ui.theme.FilmDataSource
 
 class FilmDataActivity : AppCompatActivity() {
 
     companion object {
-        const val EXTRA_FILM_TITLE = "es.ua.eps.filmoteca.extra.FILM_TITLE"
-        private const val STATE_FILM = "state_film"
+        const val EXTRA_FILM_INDEX = "es.ua.eps.filmoteca.extra.FILM_INDEX"
+
     }
     private lateinit var bindings: ActivityFilmDataBinding
     private var film: Film by mutableStateOf(Film())
+    private var filmIndex: Int = -1
 
 
     private val editLauncher = registerForActivityResult(
@@ -67,29 +69,26 @@ class FilmDataActivity : AppCompatActivity() {
         }
     }
 
-    private fun filmWithTitle(title: String?) =
-        sampleFilms().firstOrNull { it.title == title } ?: sampleFilms().first()
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        film = savedInstanceState?.let {
-            BundleCompat.getParcelable(
-                it,
-                STATE_FILM,
-                Film::class.java
-            )
-        } ?: filmWithTitle(intent.getStringExtra(EXTRA_FILM_TITLE))
+        filmIndex = intent.getIntExtra(EXTRA_FILM_INDEX, -1)
 
+        val selected = FilmDataSource.films.getOrNull(filmIndex)
+
+        if (selected == null) {
+            finish()
+            return
+        }
+
+        film = selected
         initUI()
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        outState.putParcelable(STATE_FILM, film)
-        super.onSaveInstanceState(outState)
-    }
 
     private fun initUI(){
         when (GlobalMode) {
@@ -139,15 +138,11 @@ class FilmDataActivity : AppCompatActivity() {
 
     private fun showFilm(newFilm: Film) {
         film = newFilm
+        FilmDataSource.films[filmIndex] = newFilm
 
         if (GlobalMode == Mode.Bindings) {
             with(bindings) {
-                val bmp = film.image
-                if (bmp != null) {
-                    poster.setImageBitmap(bmp)
-                } else {
-                    poster.setImageResource(film.imageResId)
-                }
+                poster.showPoster(film.poster)
                 title.text = film.title
                 director.text = getString(R.string.director, film.director)
                 year.text = getString(R.string.year, film.year)
@@ -441,7 +436,7 @@ class FilmDataActivity : AppCompatActivity() {
     @Composable
     fun FilmDataScreenPreview() {
         FilmDataScreen(
-            film = sampleFilms().first(),
+            film = FilmDataSource.films.first(),
             onImdb = {},
             onEdit = {},
             onBackToMain = {}

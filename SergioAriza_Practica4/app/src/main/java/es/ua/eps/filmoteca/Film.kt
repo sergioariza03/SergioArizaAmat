@@ -17,11 +17,16 @@ data class Film(
     var imageResId: Int = 0,
     var imageUrl: String? = null,
     var image: Bitmap? = null,
+
+
 ) : Parcelable {
 
-    // Same order as the genres array in arrays.xml
+    val poster: Any?
+        get() = image ?: imageUrl ?: imageResId.takeIf { it != 0 }
+
     enum class Genre { Action, Drama, Comedy, Horror, SciFi }
 
-    // Same order as the formats array in arrays.xml
     enum class Format { DVD, BluRay, Digital }
+
+    override fun toString() = title
 }
