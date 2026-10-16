@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Formula una pregunta en voz alta y UAdivino te dará la respuesta"; ObjectID = "eZp-KN-Bxy"; */
+"eZp-KN-Bxy.text" = "Formula una pregunta en voz alta y UAdivino te dará la respuesta";
+
+/* Class = "UIButton"; configuration.title = "Obtener respuesta"; ObjectID = "f4P-Ka-3JC"; */
+"f4P-Ka-3JC.configuration.title" = "Obtener respuesta";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "f4P-Ka-3JC"; */
+"f4P-Ka-3JC.normalTitle" = "Button";
