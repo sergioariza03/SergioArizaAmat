@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Panel de sensores"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acelerómetro"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="X: esperando datos..."
+            android:textSize="18sp"
+            android:paddingTop="12dp" />
+
+        <TextView
+            android:id="@+id/tvY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Y: esperando datos..."
+            android:textSize="18sp"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvZ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Z: esperando datos..."
+            android:textSize="18sp"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvAgitacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estado: sin agitación"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:layout_marginTop="12dp"
+            android:background="#E0F2E9" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BDBDBD"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sensor de luz"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLuz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Iluminación: esperando datos..."
+            android:textSize="18sp"
+            android:paddingTop="12dp" />
+
+        <TextView
+            android:id="@+id/tvAmbiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ambiente: desconocido"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFF3CD" />
+
+    </LinearLayout>
+</ScrollView>

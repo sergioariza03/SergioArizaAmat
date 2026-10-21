@@ -24,6 +24,8 @@ class FilmListActivity : AppCompatActivity() {
     private lateinit var bindings: ActivityFilmListBinding
 
     private lateinit var listAdapter: FilmArrayAdapter
+    private lateinit var recyclerAdapter: FilmRecyclerAdapter
+    private var openedFilm = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

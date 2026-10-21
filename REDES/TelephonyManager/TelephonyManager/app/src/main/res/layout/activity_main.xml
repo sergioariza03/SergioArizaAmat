@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Título de la aplicación -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Información de SIM y red"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Información de la SIM -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Información de la SIM"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvOperadorSIM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Operador de SIM: pendiente"
+            android:textSize="16sp"
+            android:paddingTop="10dp" />
+
+        <TextView
+            android:id="@+id/tvMccMnc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MCC / MNC: pendiente"
+            android:textSize="16sp"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvPais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="País de SIM: pendiente"
+            android:textSize="16sp"
+            android:paddingTop="8dp" />
+
+        <!-- Separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BDBDBD"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Información de la red -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Información de la red"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvOperadorRed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Operador de red: pendiente"
+            android:textSize="16sp"
+            android:paddingTop="10dp" />
+
+        <TextView
+            android:id="@+id/tvItinerancia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Itinerancia: pendiente"
+            android:textSize="16sp"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvTecnologia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tecnología de datos: pendiente"
+            android:textSize="16sp"
+            android:paddingTop="8dp" />
+
+        <!-- Separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BDBDBD"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Información de la celda -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Celda y señal"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCelda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Información de celda: pendiente"
+            android:textSize="16sp"
+            android:paddingTop="10dp" />
+
+        <TextView
+            android:id="@+id/tvSenal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Señal: pendiente"
+            android:textSize="16sp"
+            android:paddingTop="8dp" />
+
+        <!-- Separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BDBDBD"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Identificadores restringidos -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Datos restringidos"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvIdentificadores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IMEI, IMSI e ICCID: pendientes de comprobación"
+            android:textSize="16sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp" />
+
+        <!-- Botón para actualizar los datos -->
+        <Button
+            android:id="@+id/btnActualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Actualizar información" />
+
+    </LinearLayout>
+</ScrollView>
