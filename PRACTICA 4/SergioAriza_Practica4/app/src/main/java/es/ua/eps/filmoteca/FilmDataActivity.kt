@@ -235,28 +235,13 @@ class FilmDataActivity : AppCompatActivity() {
                     ) {
 
                         // FOTO
-                        val landscapeBitmap = film.image
-                        if (landscapeBitmap != null) {
-                            Image(
-                                bitmap = landscapeBitmap.asImageBitmap(),
-                                contentDescription = stringResource(R.string.film_poster),
-                                contentScale = ContentScale.Crop,
-                                modifier = Modifier
-                                    .width(160.dp)
-                                    .height(220.dp)
-                            )
-                        } else {
-                            Image(
-                                painter = painterResource(id = film.imageResId),
-                                contentDescription = stringResource(R.string.film_poster),
-                                contentScale = ContentScale.Crop,
-                                modifier = Modifier
-                                    .width(160.dp)
-                                    .height(220.dp)
-                            )
-                        }
-                        Spacer(modifier = Modifier.width(16.dp))
 
+                        Poster(
+                            poster = film.poster,
+                            modifier = Modifier
+                                .width(160.dp)
+                                .height(220.dp)
+                        )
                         // DATOS
                         Column(
                             modifier = Modifier.weight(1f)
@@ -332,28 +317,13 @@ class FilmDataActivity : AppCompatActivity() {
                 } else {
 
                     // FOTO
-                    val portraitBitmap = film.image
-                    if (portraitBitmap != null) {
-                        Image(
-                            bitmap = portraitBitmap.asImageBitmap(),
-                            contentDescription = stringResource(R.string.film_poster),
-                            contentScale = ContentScale.Crop,
-                            modifier = Modifier
-                                .width(160.dp)
-                                .height(220.dp)
-                                .align(Alignment.CenterHorizontally)
-                        )
-                    } else {
-                        Image(
-                            painter = painterResource(id = film.imageResId),
-                            contentDescription = stringResource(R.string.film_poster),
-                            contentScale = ContentScale.Crop,
-                            modifier = Modifier
-                                .width(160.dp)
-                                .height(220.dp)
-                                .align(Alignment.CenterHorizontally)
-                        )
-                    }
+                    Poster(
+                        poster = film.poster,
+                        modifier = Modifier
+                            .width(160.dp)
+                            .height(220.dp)
+                            .align(Alignment.CenterHorizontally)
+                    )
 
                     Spacer(modifier = Modifier.height(16.dp))
 

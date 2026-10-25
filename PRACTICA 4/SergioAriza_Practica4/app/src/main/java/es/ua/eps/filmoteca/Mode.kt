@@ -5,7 +5,7 @@ enum class Mode {
     Compose,
 }
 
-val GlobalMode = Mode.Bindings
+val GlobalMode = Mode.Compose
 
 
 enum class ListMode {
@@ -13,4 +13,4 @@ enum class ListMode {
     RecyclerView,
 }
 
-val GlobalListMode = ListMode.RecyclerView
+val GlobalListMode = ListMode.ListView

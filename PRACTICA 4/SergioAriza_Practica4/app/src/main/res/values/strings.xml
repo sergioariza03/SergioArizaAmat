@@ -37,6 +37,7 @@
     <string name="imdb_url">IMDb url</string>
     <string name="comments">Notes</string>
     <string name="no_camera_app">No camera app found on this device</string>
+    <string name="poster_description">Placeholder poster</string>
 
 
 

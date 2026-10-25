@@ -345,26 +345,12 @@ class FilmEditActivity : AppCompatActivity() {
                     modifier = Modifier.fillMaxWidth(),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    val bitmap = currentImage
-                    if (bitmap != null) {
-                        Image(
-                            bitmap = bitmap.asImageBitmap(),
-                            contentDescription = stringResource(R.string.film_poster),
-                            contentScale = ContentScale.Crop,
-                            modifier = Modifier
-                                .width(120.dp)
-                                .height(165.dp)
-                        )
-                    } else {
-                        Image(
-                            painter = painterResource(id = film.imageResId),
-                            contentDescription = stringResource(R.string.film_poster),
-                            contentScale = ContentScale.Crop,
-                            modifier = Modifier
-                                .width(120.dp)
-                                .height(165.dp)
-                        )
-                    }
+                    Poster(
+                        poster = currentImage ?: film.poster,
+                        modifier = Modifier
+                            .width(120.dp)
+                            .height(165.dp)
+                    )
 
                     Spacer(modifier = Modifier.width(16.dp))
 

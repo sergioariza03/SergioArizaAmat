@@ -36,5 +36,6 @@
     <string name="imdb_url">Enlace a IMDb</string>
     <string name="comments">Notas</string>
     <string name="no_camera_app">No se encontró ninguna aplicación de cámara en este dispositivo</string>
+    <string name="poster_description">Placeholder poster</string>
 
 </resources>
