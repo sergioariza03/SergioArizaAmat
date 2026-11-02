@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C715B75C3098EE9100DD9B0C /* Juego.swift in Sources */ = {isa = PBXBuildFile; fileRef = C715B75B3098EE9100DD9B0C /* Juego.swift */; };
 		C790CEA73082982B009CB667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C790CEA63082982B009CB667 /* AppDelegate.swift */; };
 		C790CEA93082982B009CB667 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C790CEA83082982B009CB667 /* SceneDelegate.swift */; };
 		C790CEAB3082982B009CB667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C790CEAA3082982B009CB667 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C715B75B3098EE9100DD9B0C /* Juego.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juego.swift; sourceTree = "<group>"; };
 		C790CEA33082982B009CB667 /* SieteyMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SieteyMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C790CEA63082982B009CB667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C790CEA83082982B009CB667 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C715B75D3098F86D00DD9B0C /* modelo */ = {
+			isa = PBXGroup;
+			children = (
+				C790CEBA30829ACA009CB667 /* Carta.swift */,
+				C790CEBE30829C31009CB667 /* Palo.swift */,
+				C790CEBC30829AF1009CB667 /* Mano.swift */,
+				C715B75B3098EE9100DD9B0C /* Juego.swift */,
+				C790CEC030829C50009CB667 /* Baraja.swift */,
+			);
+			path = modelo;
+			sourceTree = "<group>";
+		};
 		C790CE9A3082982B009CB667 = {
 			isa = PBXGroup;
 			children = (
@@ -64,12 +78,9 @@
 		C790CEA53082982B009CB667 /* SieteyMedia */ = {
 			isa = PBXGroup;
 			children = (
+				C715B75D3098F86D00DD9B0C /* modelo */,
 				C790CEA63082982B009CB667 /* AppDelegate.swift */,
 				C790CEA83082982B009CB667 /* SceneDelegate.swift */,
-				C790CEBA30829ACA009CB667 /* Carta.swift */,
-				C790CEBC30829AF1009CB667 /* Mano.swift */,
-				C790CEBE30829C31009CB667 /* Palo.swift */,
-				C790CEC030829C50009CB667 /* Baraja.swift */,
 				C790CEAA3082982B009CB667 /* ViewController.swift */,
 				C790CEAC3082982B009CB667 /* Main.storyboard */,
 				C790CEAF3082982D009CB667 /* Assets.xcassets */,
@@ -150,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C715B75C3098EE9100DD9B0C /* Juego.swift in Sources */,
 				C790CEAB3082982B009CB667 /* ViewController.swift in Sources */,
 				C790CEBB30829ACA009CB667 /* Carta.swift in Sources */,
 				C790CEC130829C50009CB667 /* Baraja.swift in Sources */,
