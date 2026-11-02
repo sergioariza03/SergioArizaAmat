@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DaliaChat"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Selector del modo de funcionamiento -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btnModoServidor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Servidor" />
+
+            <Button
+                android:id="@+id/btnModoCliente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cliente" />
+        </LinearLayout>
+
+        <!-- Panel del servidor -->
+        <LinearLayout
+            android:id="@+id/panelServidor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modo servidor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Puerto de escucha:" />
+
+            <EditText
+                android:id="@+id/etPuertoServidor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="5000"
+                android:hint="Ej. 5000" />
+
+            <TextView
+                android:id="@+id/tvIpServidor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IP del servidor: pendiente"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tvEstadoServidor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Servidor detenido"
+                android:layout_marginTop="8dp" />
+
+            <Button
+                android:id="@+id/btnIniciarServidor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Iniciar servidor" />
+
+            <Button
+                android:id="@+id/btnDetenerServidor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detener servidor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mensajes recibidos:"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/tvMensajesServidor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Todavía no se han recibido mensajes."
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <!-- Panel del cliente: oculto inicialmente -->
+        <LinearLayout
+            android:id="@+id/panelCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modo cliente"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IP del servidor:" />
+
+            <EditText
+                android:id="@+id/etIpCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:singleLine="true"
+                android:text="10.0.2.2"
+                android:hint="Ej. 192.168.1.100" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Puerto del servidor:" />
+
+            <EditText
+                android:id="@+id/etPuertoCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="5000"
+                android:hint="Ej. 5000" />
+
+            <Button
+                android:id="@+id/btnConectar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Conectar" />
+
+            <Button
+                android:id="@+id/btnDesconectar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Desconectar" />
+
+            <TextView
+                android:id="@+id/tvEstadoCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Desconectado"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mensaje:"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/etMensaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:singleLine="true"
+                android:hint="Escribe un mensaje" />
+
+            <Button
+                android:id="@+id/btnEnviar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enviar mensaje" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Respuesta del servidor:"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/tvRespuesta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Todavía no hay respuestas."
+                android:padding="10dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
