@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Ejercicio 1: Toast -->
+        <EditText
+            android:id="@+id/etToast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Texto para el Toast"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnToast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mostrar Toast" />
+
+        <!-- Ejercicio 2: Snackbar -->
+        <EditText
+            android:id="@+id/etTarea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="Nueva tarea"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnTarea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Añadir tarea" />
+
+        <TextView
+            android:id="@+id/tvTareas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp" />
+
+        <!-- Ejercicio 3: diálogos de selección -->
+        <TextView
+            android:id="@+id/tvEjemplo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@color/blanco"
+            android:padding="12dp"
+            android:text="Este es un texto de ejemplo bastante largo para probar los diálogos de selección. Cambiaremos su color de fondo, el color de la letra y el tamaño del texto desde dos diálogos distintos. Android permite mostrar listas de opciones de selección exclusiva con MaterialAlertDialogBuilder y setSingleChoiceItems, y el texto se actualiza en cuanto el usuario elige una de ellas."
+            android:textColor="@color/negro"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnColor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="Color" />
+
+            <Button
+                android:id="@+id/btnTamano"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="Tamaño" />
+        </LinearLayout>
+
+        <!-- Ejercicio 4: notificaciones del sistema -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnIniciar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="Iniciar" />
+
+            <Button
+                android:id="@+id/btnDetener"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="Detener" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

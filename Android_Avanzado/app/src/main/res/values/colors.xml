@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="azul">#1976D2</color>
+    <color name="gris_claro">#D3D3D3</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="negro">#000000</color>
+    <color name="verde_texto">#00FF00</color>
+    <color name="primary">#000080</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="surface">#CDCDCD</color>
+    <color name="on_surface">#000080</color>
+</resources>

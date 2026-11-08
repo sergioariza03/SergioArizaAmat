@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!-- Ejercicio 1: shape con borde, esquinas y gradiente -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/fondo_texto"
+        android:padding="16dp"
+        android:text="Ejercicio 1: shape con gradiente"
+        android:textColor="@android:color/black" />
+
+    <!-- Ejercicio 2: selector (StateListDrawable) como fondo del botón -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_boton"
+        android:text="Pulsa el botón"
+        app:backgroundTint="@null" />
+
+    <!-- Ejercicio 3: AnimationDrawable como indeterminateDrawable -->
+    <ProgressBar
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/animacion_numeros"
+        android:indeterminateTint="@null" />
+
+    <!-- Ejercicio 4: LevelListDrawable como progressDrawable -->
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:max="10000"
+        android:progressDrawable="@drawable/niveles_barra"
+        android:progressTint="@null" />
+</LinearLayout>

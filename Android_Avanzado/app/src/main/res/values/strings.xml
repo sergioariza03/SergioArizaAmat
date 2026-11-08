@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Android Avanzado</string>
+    <string name="grafica_descripcion">Gráfica circular al %1$d por ciento</string>
+    <string name="escribe_texto">Escribe un texto</string>
+    <string name="tarea_anadida">Tarea añadida</string>
+    <string name="deshacer">Deshacer</string>
+    <string name="tareas_iniciadas">Tareas iniciadas: %1$d</string>
+    <string name="permiso_denegado">Permiso de notificaciones denegado</string>
+
+    <string-array name="opciones_color">
+        <item>Blanco y negro</item>
+        <item>Negro y blanco</item>
+        <item>Negro y verde</item>
+    </string-array>
+    <string-array name="opciones_tamano">
+        <item>Pequeño</item>
+        <item>Normal</item>
+        <item>Grande</item>
+    </string-array>
+
+    <string name="contador_terminado">Contador terminado</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnDrawables"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drawables" />
+
+    <Button
+        android:id="@+id/btnComponentes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Personalización de componentes" />
+
+    <Button
+        android:id="@+id/btnNotificaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Notificaciones" />
+
+    <Button
+        android:id="@+id/btnPantallaTactil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Pantalla táctil" />
+
+    <Button
+        android:id="@+id/btnEstilosTemas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Estilos y temas" />
+
+    <Button
+        android:id="@+id/btnHilos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Hilos de ejecución" />
+
+</LinearLayout>
